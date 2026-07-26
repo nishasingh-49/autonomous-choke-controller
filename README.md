@@ -200,7 +200,7 @@ Target Flow Rate Demand (Q): 150.0 bbl/hr
 Final Achieved Flow Rate:   150.02 bbl/hr
 Final Choke Actuator:       61.0%
 
---- SAFETY ENVELOPE CHECKS ---
+SAFETY ENVELOPE CHECKS
 WHP Violation: NO (Min WHP: 225.9 psi &gt;= 210 psi)
 FLP Violation: NO (Min FLP: 159.9 psi &gt;= 150 psi)
 BHP Violation: NO (Min BHP: 2944.4 psi &gt;= 2850 psi)
