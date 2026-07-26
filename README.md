@@ -3,7 +3,9 @@
 > *Developed for Honeywell Technical Challenge*
 
 ---
+[![Watch Video Pitch](https://img.shields.io/badge/YouTube-Watch%20Pitch%20Demo-red?style=for-the-badge&logo=youtube)](https://www.youtube.com/watch?v=MUrfHLGR5Ds)
 
+> **[Click here to watch the Video Pitch & Demo on YouTube](https://www.youtube.com/watch?v=MUrfHLGR5Ds)**
 ## Executive Summary
 
 This repository implements a **Closed Loop Model Predictive Control (MPC)** engine to automate choke valve positioning on oil wells. It dynamically tracks oil production targets ($Q$) while maintaining critical real time operating bounds on Wellhead Pressure ($WHP$), Flowline Pressure ($FLP$), and Bottomhole Pressure ($BHP$).
