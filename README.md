@@ -207,6 +207,6 @@ BHP Violation: NO (Min BHP: 2944.4 psi &gt;= 2850 psi)
 ==================================================</code></pre>
 
 <hr>
-<h3>👤 Author & Contact</h3>
+<h3> Author & Contact</h3>
 <p><b>Nisha Singh</b><br>
 GitHub: <a href="https://github.com/nishasingh-49">@nishasingh-49</a></p>
