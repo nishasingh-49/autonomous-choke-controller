@@ -130,7 +130,7 @@ The closed-loop MPC engine was benchmarked across three critical operational sce
 
 ### 3. Core Technical Takeaways
 1. **Guaranteed Constraint Satisfaction:** The 10 step horizon lookahead successfully screens and discards candidate choke moves that would cause downstream pressure limit breaches.
-2. **Zero Overshoot Setpoint Control:** Physics guided state-space predictions prevent choke over actuation, extending valve lifespan and maintaining well stability.
+2. **Zero Overshoot Setpoint Control:** Physics guided state space predictions prevent choke over actuation, extending valve lifespan and maintaining well stability.
 3. **Robust Handling of Edge Cases:** Clamping logic ensures the controller degrades gracefully under unachievable physical demands.
 
 ## Quickstart & Execution Guide
@@ -161,12 +161,12 @@ pip install numpy pandas scikit-learn matplotlib jupyter
 
 ```
 <h3>3. Executing the Simulation Pipeline</h3>
-<p>Launch Jupyter Notebook to execute the end-to-end controller workflow:</p>
+<p>Launch Jupyter Notebook to execute the end to end controller workflow:</p>
 
 <pre><code>jupyter notebook</code></pre>
 
 <ol>
-  <li>Open <code>Honeywell_MPC_Controller.ipynb</code>.</li>
+  <li>Open <code>autonomous_production_choke_controller.ipynb</code>.</li>
   <li>Run all cells sequentially by selecting <b>Kernel &rarr; Restart &amp; Run All</b> from the top menu bar.</li>
 </ol>
 
@@ -176,17 +176,17 @@ pip install numpy pandas scikit-learn matplotlib jupyter
 <p>When executed, the notebook runs through these five core steps:</p>
 
 <ol>
-  <li><b>Data Loading &amp; Cleaning:</b> Preprocesses raw time-series well sensor data (<i>Q, WHP, FLP, BHP</i>).</li>
-  <li><b>System Identification:</b> Trains the multi-output Ridge Regression model to estimate the discrete-time State-Space dynamics matrices (<b>A</b>, <b>B</b>).</li>
-  <li><b>MPC Engine Instantiation:</b> Configures the <code>DiscreteTimeMPC</code> class with a 10-step dynamic horizon lookahead (<i>H<sub>p</sub></i> = 10) and active pressure safety envelopes.</li>
-  <li><b>Closed-Loop Scenario Evaluation:</b> Runs closed-loop feedback simulations for:
+  <li><b>Data Loading &amp; Cleaning:</b> Preprocesses raw time series well sensor data (<i>Q, WHP, FLP, BHP</i>).</li>
+  <li><b>System Identification:</b> Trains the multi output Ridge Regression model to estimate the discrete time State Space dynamics matrices (<b>A</b>, <b>B</b>).</li>
+  <li><b>MPC Engine Instantiation:</b> Configures the <code>DiscreteTimeMPC</code> class with a 10 step dynamic horizon lookahead (<i>H<sub>p</sub></i> = 10) and active pressure safety envelopes.</li>
+  <li><b>Closed-Loop Scenario Evaluation:</b> Runs closed loop feedback simulations for:
     <ul>
       <li><b>Scenario A:</b> Cold Startup (0 &rarr; 130 bbl/hr)</li>
       <li><b>Scenario B:</b> Dynamic Step Tracking (100 &rarr; 150 bbl/hr)</li>
       <li><b>Scenario C:</b> Infeasible Target Clamp (250 bbl/hr)</li>
     </ul>
   </li>
-  <li><b>Dashboard Generation:</b> Plots multi-panel time-series figures showing choke adjustments and pressure boundary enforcement.</li>
+  <li><b>Dashboard Generation:</b> Plots multi panel time series figures showing choke adjustments and pressure boundary enforcement.</li>
 </ol>
 
 <hr>
